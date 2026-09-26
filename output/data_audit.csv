@@ -1,0 +1,5 @@
+dataset,nobs,regions,years,first_year,last_year,missing_model_vars,available_iv
+REG_lf_reg,5089,243,23,2001,2023,0,
+REG_lf_reg_iv,5089,243,23,2001,2023,0,2815
+REG_emp_reg,5089,243,23,2001,2023,0,
+REG_emp_reg_iv,5089,243,23,2001,2023,0,2815

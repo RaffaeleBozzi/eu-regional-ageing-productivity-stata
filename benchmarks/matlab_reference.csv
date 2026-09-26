@@ -1,0 +1,25 @@
+analysis,ageing_definition,model,matlab_beta,matlab_se,matlab_p,matlab_n,matlab_regions,matlab_years,matlab_F,source
+baseline,EMP,fe,-0.490441225524577,0.0732866414890713,2.65724957805834e-11,2993,233,13,,original: results/paper_main_results.csv
+baseline,EMP,pooled_ageing,2.91310831527357,0.200915222355074,1.03579930917582e-46,5089,243,23,,original: results/paper_main_results.csv
+baseline,EMP,pooled_controls,-0.392089795566122,0.099876191804092,8.76004621459874e-05,5089,243,23,,original: results/paper_main_results.csv
+baseline,LF,fe,-0.635149508385817,0.0760884829066204,1.09078436307155e-16,2993,233,13,,original: results/paper_main_results.csv
+baseline,LF,pooled_ageing,3.34713411019815,0.20120572724296,1.49955136477872e-60,5089,243,23,,original: results/paper_main_results.csv
+baseline,LF,pooled_controls,-0.274326259063504,0.102206244462797,0.00729729020725968,5089,243,23,,original: results/paper_main_results.csv
+endogeneity,EMP,control_function,0.99213088334338,0.361352862227691,0.00652825174280602,2815,226,13,,fresh MATLAB analysis: endogeneity_test_summary.csv
+endogeneity,LF,control_function,0.839593409578106,0.372631691108029,0.0252141719132026,2815,226,13,,fresh MATLAB analysis: endogeneity_test_summary.csv
+first_stage,EMP,first_stage,0.586806707421812,0.0327028819201042,0,2815,226,13,321.97198580559,original: results/paper_iv_first_stage_results.csv
+first_stage,LF,first_stage,0.57826031273412,0.0329776305965393,0,2815,226,13,307.47363043001,original: results/paper_iv_first_stage_results.csv
+identification,EMP,country_year,-0.189188593368705,0.126831291896178,0.137147960404417,2993,233,13,,original: results/paper_identification_results.csv
+identification,EMP,region_trends,0.107202515472652,0.105619647358083,0.311169601922655,2993,233,13,,original: results/paper_identification_results.csv
+identification,LF,country_year,-0.209068030152544,0.136748317494357,0.127663242411365,2993,233,13,,original: results/paper_identification_results.csv
+identification,LF,region_trends,0.137672221375169,0.124535980784871,0.270096093634088,2993,233,13,,original: results/paper_identification_results.csv
+iv,EMP,fe_2sls,-1.10406607667118,0.327451287098908,0.000879280685240458,2815,226,13,,original: results/paper_iv_second_stage_results.csv
+iv,EMP,same_sample_ols,-0.438441020917852,0.139510427224742,0.00189906466659284,2815,226,13,,original: results/paper_iv_second_stage_results.csv
+iv,LF,fe_2sls,-1.12038362379014,0.327640513357316,0.000744626472334531,2815,226,13,,original: results/paper_iv_second_stage_results.csv
+iv,LF,same_sample_ols,-0.574284306908576,0.153553052982133,0.000233547810686963,2815,226,13,,original: results/paper_iv_second_stage_results.csv
+robustness,EMP,baseline_2011_220_10,-0.490441225524573,0.136522502898357,0.000400008852634803,2993,233,13,,original: results/paper_robustness_results.csv
+robustness,EMP,later_2013_220_10,-0.546326246215679,0.146263684163501,0.000236111703776798,2553,233,11,,original: results/paper_robustness_results.csv
+robustness,EMP,stricter_2011_230_10,-0.528309869222731,0.151221676657436,0.00057057535756555,2330,233,10,,original: results/paper_robustness_results.csv
+robustness,LF,baseline_2011_220_10,-0.63514950838582,0.149625818727114,3.16397123354406e-05,2993,233,13,,original: results/paper_robustness_results.csv
+robustness,LF,later_2013_220_10,-0.707284836471723,0.160080434661144,1.52708817702241e-05,2553,233,11,,original: results/paper_robustness_results.csv
+robustness,LF,stricter_2011_230_10,-0.666107399902313,0.162681880782237,5.84403294232594e-05,2330,233,10,,original: results/paper_robustness_results.csv
