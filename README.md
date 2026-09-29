@@ -6,7 +6,7 @@ I rewrote the estimation in Stata, starting from the regression panels built by 
 
 ## The study
 
-The paper asks whether regions with an older workforce are less productive. The panel covers 243 NUTS2 regions from 2001 to 2023 and is built from Eurostat and ARDECO data. Productivity is log real gross value added per hour worked. Ageing is the share of workers aged 55–64 among those aged 15–64, measured either in the labour force (LF) or in employment (EMP); the two measures enter separate regressions. The controls are the agriculture and industry shares of hours worked, tertiary education and lagged capital intensity. In the IV model, ageing is instrumented with the share of the population aged 45–54 ten years earlier.
+The paper asks whether regions with an older workforce are less productive. The panel covers 243 NUTS2 regions from 2001 to 2023 and is built from Eurostat and ARDECO data. Productivity is log real gross value added per hour worked. Ageing is the share of workers aged 55-64 among those aged 15-64, measured either in the labour force (LF) or in employment (EMP); the two measures enter separate regressions. The controls are the agriculture and industry shares of hours worked, tertiary education and lagged capital intensity. In the IV model, ageing is instrumented with the share of the population aged 45-54 ten years earlier.
 
 ## Results
 
@@ -26,7 +26,7 @@ The coefficient is negative and significant with region and year effects and in 
 
 ## Comparison with MATLAB
 
-`07_compare_matlab_stata.do` compares each Stata estimate with the MATLAB one: the 22 estimates in the paper tables and the control-function endogeneity test. For all fixed-effects and IV models, coefficients and standard errors are identical up to rounding (differences below 10⁻⁸), and each model uses exactly the same region-year observations. The clustered standard errors match because `regress` with `vce(cluster)` and `ivregress` with the `small` option apply the same finite-sample correction as the MATLAB code.
+`07_compare_matlab_stata.do` compares each Stata estimate with the MATLAB one: the 22 estimates in the paper tables and the control-function endogeneity test. For all fixed-effects and IV models, coefficients and standard errors are identical up to rounding (differences below 1e-8), and each model uses exactly the same region-year observations. The clustered standard errors match because `regress` with `vce(cluster)` and `ivregress` with the `small` option apply the same finite-sample correction as the MATLAB code.
 
 The pooled regressions are the exception. The paper labels them OLS, but the MATLAB code estimates them by robust regression (`fitlm` with bisquare weights), and Stata has no built-in command for the same estimator. For these models the code reports `rreg` and OLS with robust standard errors, which give the same signs as MATLAB and different magnitudes.
 
@@ -46,14 +46,14 @@ From another directory, pass the folder as an argument: `do "<path>/do/master.do
 
 | Do-file | Content | MATLAB script |
 |---|---|---|
-| `00_setup_import.do` | Import and checks of the four panels | – |
+| `00_setup_import.do` | Import and checks of the four panels | - |
 | `01_baseline_models.do` | Pooled regressions, two-way FE | `Estimation.m` |
 | `02_fe_robustness.do` | Two-way FE under three sample rules | `Estimation_Robustness.m` |
 | `03_identification_robustness.do` | Country-year effects, regional trends | `Identification_Robustness.m` |
 | `04_endogeneity_test.do` | Control-function test | `Endogeneity_Test_IV.m` |
 | `05_first_stage_iv.do` | First stage | `First_Stage_IV.m` |
 | `06_fe_2sls.do` | FE OLS and FE-2SLS | `IV_2SLS_FE.m` |
-| `07_compare_matlab_stata.do` | Comparison with MATLAB, figure | – |
+| `07_compare_matlab_stata.do` | Comparison with MATLAB, figure | - |
 
 `master.do` runs them in order; `lib/` contains the sample construction and the program that stores each result. `data/` holds the four regression panels, `benchmarks/` the MATLAB estimates and `output/` the results.
 
